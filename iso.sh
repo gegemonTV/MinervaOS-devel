@@ -12,4 +12,9 @@ menuentry "minervaos" {
 	multiboot /boot/minervaos.kernel
 }
 EOF
+if grub-file --is-x86-multiboot isodir/boot/minervaos.kernel; then
+  echo multiboot confirmed
+else
+  echo the file is not multiboot
+fi
 grub-mkrescue -o minervaos.iso isodir
