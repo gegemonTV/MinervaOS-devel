@@ -4,9 +4,9 @@
 
 void kernel_main(void) {
 	terminal_initialize();
-	printf("Hello, MinervaOS!\n");
-	printf("Welcome to the club, !\n");
-	for (int i = 0; i < 23; i++){
-		printf("12\n");
+	terminal_setcolor(0, 3);
+	printf("minerva OS");
+	for (int i = 0; i < 25; i++){
+		printf("%s\n", "1");
 	}
 }

@@ -1,6 +1,5 @@
 #include <stdbool.h>
 #include <stddef.h>
-#include <stdint.h>
 #include <string.h>
 
 #include <kernel/tty.h>
@@ -27,10 +26,6 @@ void terminal_initialize(void) {
 			terminal_buffer[index] = vga_entry(' ', terminal_color);
 		}
 	}
-}
-
-void terminal_setcolor(uint8_t color) {
-	terminal_color = color;
 }
 
 void terminal_putentryat(unsigned char c, uint8_t color, size_t x, size_t y) {
@@ -93,4 +88,8 @@ void terminal_rolldown(void){
 		const size_t index = (VGA_HEIGHT-1) * VGA_WIDTH + x;
 		terminal_buffer[index] = vga_entry(' ',  terminal_color);
 	}
+}
+
+void terminal_setcolor(uint8_t background_color, uint8_t foreground_color){
+	terminal_color = vga_entry_color(foreground_color, background_color);
 }
