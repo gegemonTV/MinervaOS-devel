@@ -38,6 +38,9 @@ string/memcpy.o \
 string/memmove.o \
 string/memset.o \
 string/strlen.o \
+string/strcpy.o \
+string/strcat.o \
+ctype/ctype.o \
 
 HOSTEDOBJS=\
 $(ARCH_HOSTEDOBJS) \
@@ -48,8 +51,8 @@ $(HOSTEDOBJS) \
 
 LIBK_OBJS=$(FREEOBJS:.o=.libk.o)
 
-#BINARIES=libc.a libk.a # Not ready for libc yet.
-BINARIES=libk.a
+BINARIES=libc.a libk.a #  ready for libc yet.
+#BINARIES=libk.a
 
 .PHONY: all clean install install-headers install-libs
 .SUFFIXES: .o .libk.o .c .S
