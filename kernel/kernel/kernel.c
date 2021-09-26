@@ -2,12 +2,13 @@
 
 #include <kernel/tty.h>
 #include <kernel/virtualmem.h>
+#include <kernel/vga.h>
 
 void init(
 	void)
 	{
 		terminal_initialize();
-		terminal_setcolor(0, 15);
+		terminal_setcolor(VGA_COLOR_BLACK, VGA_COLOR_DARK_GREY);
 		printf("Started Initialization\n");
 
 		virtualmem_init();
