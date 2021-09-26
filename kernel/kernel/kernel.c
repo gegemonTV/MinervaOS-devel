@@ -5,8 +5,7 @@
 void kernel_main(void) {
 	terminal_initialize();
 	terminal_setcolor(0, 3);
-	printf("minerva OS%4.5f", 5);
-	for (int i = 0; i < 25; i++){
-		printf("%i", i);
-	}
+	printf("minerva OS\n");
+	printf("hello, %s!\n", "User");
+	printf("CPU Loaded for: %d%s", 5, "%");
 }

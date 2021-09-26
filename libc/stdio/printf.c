@@ -4,7 +4,9 @@
 #include <stdbool.h> 
 #include <stdint.h>
 #include <stdarg.h>
- 
+
+//TODO: add support for floating numbers and remove bug with "%" sign (when just "%" sign is used the "%" moves with "0123456789")
+
 #define MAX_DIGIT 32
 
 #if UINT32_MAX == UINTPTR_MAX
@@ -122,7 +124,7 @@ vprintf (
 	const char* format, 
 	va_list list)
 {
-    int chars        = 0;
+	int chars        = 0;
     char intStrBuffer[256] = {0};
  
     for (int i = 0; format[i]; ++i) {

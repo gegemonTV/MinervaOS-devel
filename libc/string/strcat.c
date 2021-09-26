@@ -1,16 +1,15 @@
 #include <string.h>
 
-char*
+char *
 strcat(
-    char* dst,
-    const char* src)
-    {
-        char* rdest = dst;
+    char *dest, 
+    const char *src)
+{
+    char *rdest = dest;
 
-        while (*dst)
-            dst++;
-        
-        while(*dst++ == *src++);
-
-        return rdest;
-    }
+    while (*dest)
+      dest++;
+    while (*dest++ = *src++)
+      ;
+    return rdest;
+}
