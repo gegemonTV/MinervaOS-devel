@@ -6,21 +6,21 @@
 
 void init(
 	void)
-	{
-		terminal_initialize();
-		terminal_setcolor(VGA_COLOR_BLACK, VGA_COLOR_DARK_GREY);
-		printf("Started Initialization\n");
+{
+	terminal_initialize();
+	terminal_setcolor(VGA_COLOR_BLACK, VGA_COLOR_DARK_GREY);
+	printf("Started Initialization\n");
 
-		virtualmem_init();
+	virtualmem_init();
 
-		printf("Finished initialization\n");
-		//terminal_clear();
-		terminal_setcolor(0, 3);
-	}
+	printf("Finished initialization\n");
+	//terminal_clear();
+	terminal_setcolor(0, 3);
+}
 
-void kernel_main(void) {
+void kernel_main(void)
+{
 	init();
 
 	printf("minerva OS\n");
-	
 }
