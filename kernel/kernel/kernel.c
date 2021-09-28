@@ -22,7 +22,5 @@ void kernel_main(void) {
 	init();
 
 	printf("minerva OS\n");
-	printf("hello, %s!\n", "User");
-	printf("CPU Loaded for: %d%s", 5, "%");
 	
 }

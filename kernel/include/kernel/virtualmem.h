@@ -8,7 +8,7 @@
 
 void virtualmem_init();
 
-void* virtualmem_alloc(uint_fast16_t);
+void* malloc(uint_fast16_t);
 void* virtualmem_alloc_align(uint_fast16_t, uint_fast16_t);
 
 void virtualmem_map_pages(void*, uint_fast16_t, uint_fast16_t);

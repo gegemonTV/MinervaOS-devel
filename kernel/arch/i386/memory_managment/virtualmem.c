@@ -76,7 +76,7 @@ static void VMUpdatePage(uintptr_t addr, uint_fast16_t flags)
         uint64_t oldBase = (uint64_t)ptBase;
         uint_fast16_t oldFlags = pd & 0x1f;
 
-        ptBase = virtualmem_alloc(4096);
+        ptBase = malloc(4096);
 
         for (uint_fast16_t i = 0; i < 512; ++i)
         {
@@ -108,7 +108,7 @@ void virtualmem_init()
 }
 
 // ------------------------------------------------------------------------------------------------
-void *virtualmem_alloc(uint_fast16_t size)
+void *malloc(uint_fast16_t size)
 {
     // Align to 4k for now
     return virtualmem_alloc_align(size, 4096);
